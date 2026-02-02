@@ -1,4 +1,4 @@
-nums = list(map(int, input().strip()))
+nums = list(map(int, input().split()))
 
 node_value  = []
 left_child  = []
@@ -36,9 +36,28 @@ def dfs():
 
 
 # 建樹
-root = dfs()
+def print_dfs(u):
+    if u == -1:
+        return
 
-print("node_value :", node_value)
-print("left_child :", left_child)
-print("right_child:", right_child)
-print("root index :", root)
+    # 印自己
+    print(node_value[u], end='')
+
+    # 印左子節點（若存在）
+    if left_child[u] != -1:
+        print(' ' + str(node_value[left_child[u]]), end='')
+
+    # 印右子節點（若存在）
+    if right_child[u] != -1:
+        print(' ' + str(node_value[right_child[u]]), end='')
+
+    # 節點結尾
+    print(',', end='')
+
+    # DFS
+    print_dfs(left_child[u])
+    print_dfs(right_child[u])
+
+root = dfs()
+print_dfs(root)
+print()  # 換行
