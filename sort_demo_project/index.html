@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylefinal.css">
+  <title>DSA 2025 SEE Team 27</title>
+</head>
+<body>
+  <div class="nav">
+    <button class="nav-button" data-algo="Bubble Sort">BUBBLE</button>
+    <button class="nav-button" data-algo="Selection Sort">SELECTION</button>
+    <button class="nav-button" data-algo="Insertion Sort">INSERTION</button>
+    <button class="nav-button" data-algo="Merge Sort">MERGE</button>
+    <button class="nav-button" data-algo="Quick Sort">QUICK</button>
+  </div>
+
+  <div class="down">
+    <div class="left">
+      <h1 id="sort-name">SORTING NAME</h1>
+      <div class="complexity">
+        <div class="comp-mini">
+          Worst<br>Best<br>Average<br>Space
+        </div>
+        <div class="comp-mini" id="complexity-values">
+          O(n)<br>O(n)<br>O(n)<br>O(n)
+        </div>
+      </div>
+      <div class="setting">
+        <div class="input">
+          <label for="N">N </label>
+          <input type="number" id="N"><br>
+        </div>
+        <div class="input">
+          <label for="A">A </label>
+          <input type="text" id="A"><br>
+        </div>
+        <div class="button-container">
+          <button class="set-button" id="randomBtn">Random</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div id="array"></div>
+      <div class="action">
+        <h2>Speed</h2>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <button class="act-button-start" id="startBtn">START</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sort.js"></script>
+</body>
+</html>
+

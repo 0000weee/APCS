@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 6px;
+    background-color: #f4ecd4;
+    overflow: hidden;
+}
+
+/* Copy from see 2 */
+#array {
+  flex: 3;
+  border: solid red 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#array > div {
+  border: solid var(--main-bg-color) 0px;
+}
+
+#side {
+  flex: 1;
+  border: solid green 1px;
+}
+
+/* ---CONTENT---- */
+
+/* SORT ALGORITHM BUTTONS */
+.nav{
+    width: 100%;
+    background-color: none;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.nav-button{
+    width:16.6%;
+    height: 6vh;
+    margin: 6px;
+    background-color: #ffbd59;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 0;
+    cursor: pointer;
+}
+
+button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+  }
+
+/* OTHERS BELOW */
+.down{
+    width: 99%;
+    height: 94vh;
+    margin: 6px;
+    background-color: none;
+    border-radius: 25px;
+    display: flex;
+}
+
+/* LEFT SIDE*/
+.left{
+    width: 25%;
+    height: 90vh;
+    margin-right:6px;
+    background-color: none;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SORTING NAME */
+h1{
+    min-height: 5%;
+    margin-bottom: 6px;
+    background-color: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* COMPLEXITY BOX */
+.complexity{ 
+    width: 100%;
+    min-height: 30%;
+    background-color: #ffbd59;
+    border-radius: 25px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comp-mini{
+    width: 40%;
+    border:none;
+    font-size: 25px;
+    line-height: 38px;
+}
+
+.comp-mini:nth-child(1){text-align:left;}
+.comp-mini:nth-child(2){text-align:center;}
+
+/* ARRAY SETTING BOX */
+.setting{
+    width: 100%;
+    min-height: 30%;
+    margin-top: 6px;
+    background-color: #ffbd59;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    width: 80%;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+input[type=text], input[type=number]{
+    width: 100%;
+    height: 25px;
+    margin: 6px;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 100px;
+}
+
+.button-container{
+    width:80%;
+    height: 50%;
+    margin: 6px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.set-button{
+    width: 44%;
+    height: 35%;
+    background-color: #d9d9d9;
+    margin: 6px;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.right{
+    display: flex;
+    flex-direction: column;
+    width:75%;
+    height: 90vh;
+    margin-left: 6px;
+    background-color: none;
+    border-radius: 25px;
+}
+
+/* PLAY, PAUSE, SPEED, START BUTTONS */
+.action{
+    width: 100%;
+    height: 9%;
+    margin-top: 6px;
+    background-color: none;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    margin: 6px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.slider {
+    width: 30%;
+    height: 18px;
+    background: #d3d3d3;
+    border-radius:25px;
+    appearance: none;
+    outline: none;
+    transition: .5s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ffbd59;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.act-button{
+    width: 10%;
+    height: 50%;
+    margin: 6px;
+    background-color: #d9d9d9;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.act-button-start{
+    width: 10%;
+    height: 50%;
+    margin: 6px;
+    background-color: #ffbd59;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-weight:bold;
+}
