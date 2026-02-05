@@ -1,23 +1,47 @@
-def evaluate_addition(expression: str) -> int:
+def evaluate_addition(expression):
     """計算只有加法的表達式，例如 '1+2+3'"""
-    return sum(int(term) for term in expression.split('+'))
+    
+    parts = expression.split('+')
+    total = 0
+
+    for part in parts:
+        number = int(part)
+        total = total + number
+
+    return total
 
 
-def evaluate_multiplication(expression: str) -> int:
+def evaluate_multiplication(expression):
     """先加後乘，例如 '1+2*3+4'"""
+
+    parts = expression.split('*')
     result = 1
-    for term in expression.split('*'):
-        result *= evaluate_addition(term)
+
+    for part in parts:
+        value = evaluate_addition(part)
+        result = result * value
+
     return result
 
 
-def decode_expression(expression: str) -> int:
+
+def decode_expression(expression):
     """處理逗號分隔的多個表達式，回傳 max - min"""
-    values = [evaluate_multiplication(expr) for expr in expression.split(',')]
-    return max(values) - min(values)
+
+    parts = expression.split(',')
+    values = []
+
+    for part in parts:
+        result = evaluate_multiplication(part)
+        values.append(result)
+
+    maximum = max(values)
+    minimum = min(values)
+
+    return maximum - minimum
 
 
-def parse_function(codes: str, index: int) -> tuple[int, int]:
+def parse_function(codes, index):
     """
     解析 f(...)，回傳：
     - 計算結果
@@ -41,7 +65,7 @@ def parse_function(codes: str, index: int) -> tuple[int, int]:
             index += 1
 
 
-def expand_functions(codes: str) -> str:
+def expand_functions(codes):
     """將所有 f(...) 展開成數字"""
     result = ''
     index = 0
@@ -58,13 +82,9 @@ def expand_functions(codes: str) -> str:
 
     return result
 
+# main()
 
-def main():
-    codes = input()
-    expanded = expand_functions(codes)
-    answer = evaluate_multiplication(expanded)
-    print(answer)
-
-
-if __name__ == '__main__':
-    main()
+codes = input()
+expanded = expand_functions(codes)
+answer = evaluate_multiplication(expanded)
+print(answer)
