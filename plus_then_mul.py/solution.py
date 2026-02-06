@@ -15,6 +15,7 @@ def evaluate_multiplication(expression):
     """先加後乘，例如 '1+2*3+4'"""
 
     parts = expression.split('*')
+    
     result = 1
 
     for part in parts:
